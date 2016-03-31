@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('api/findpoke', 'PagesController@show');
+Route::get('api/pokemon/{ability}', 'PagesController@show');

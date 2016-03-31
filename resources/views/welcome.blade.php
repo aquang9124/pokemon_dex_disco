@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     <form action="backend" method="post">
                         <div class="form-group">
-                            <label>Enter a pokemon's name:</label>
+                            <label>Enter a pokemon's name or pokedex number:</label>
                             <input type="text" name="poke_name" class="form-control" required="required" v-model="poke_name" @keydown.enter.prevent="submitId">
                         </div>
                     </form>
@@ -20,6 +20,8 @@
                         <h2 class="text-center initializer" @click="revealInfo">@{{ poke_info.name | capitalize }}</h2>
                     </div>
                     <div class="info-box" v-show="show_info">
+                        <h2 class="text-center"><strong>Type(s)</strong></h2>
+                        <p class="text-center" v-for="types in poke_info.types">@{{ types.type.name | uppercase }}</p>
                         <h2 class="text-center"><strong>Alternate Forms</strong></h2>
                         <img class="poke-box" :src="poke_form" alt="Shiny pokemon" @click="changeForm">
                         <h2 class="text-center"><strong>Abilities</strong></h2>

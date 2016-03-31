@@ -13,13 +13,8 @@ class PagesController extends Controller
 		return view('welcome');	
 	}
 
-	public function show() 
+	public function show($ability) 
 	{
-		$poke_images = [];
-		for ($i = 1; $i < 722; $i++):
-			array_push($poke_images, 'http://pokeapi.co/media/img/' . $i . '.png');
-		endfor;
-
-		return $poke_images;
+		return $ability;
 	}
 }

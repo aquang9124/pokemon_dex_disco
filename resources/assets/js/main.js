@@ -1,8 +1,6 @@
 var Vue = require('vue');
 Vue.use(require('vue-resource'));
 
-import Abilities from './components/Abilities.vue';
-
 new Vue({
 	el: 'body',
 
@@ -18,8 +16,6 @@ new Vue({
 		list: "",
 		show_info: false,
 	},
-
-	components: { Abilities },
 
 	ready() {
 		console.log('Vue and Vueify all set to go!');
