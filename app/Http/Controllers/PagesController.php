@@ -13,8 +13,4 @@ class PagesController extends Controller
 		return view('welcome');	
 	}
 
-	public function show($ability) 
-	{
-		return $ability;
-	}
 }

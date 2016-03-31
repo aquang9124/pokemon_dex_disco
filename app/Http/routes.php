@@ -12,4 +12,3 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('api/pokemon/{ability}', 'PagesController@show');
