@@ -11,8 +11,8 @@
                 <div class="panel-body">
                     <form action="backend" method="post">
                         <div class="form-group">
-                            <label>Enter a pokemon's national pokedex number:</label>
-                            <input type="number" name="poke_id" class="form-control" required="required" v-model="poke_id" @keydown.enter.prevent="submitId">
+                            <label>Enter a pokemon's name:</label>
+                            <input type="text" name="poke_name" class="form-control" required="required" v-model="poke_name" @keydown.enter.prevent="submitId">
                         </div>
                     </form>
                     <img :src="poke_img" class="poke-box" @click="getInfo">
@@ -20,6 +20,8 @@
                         <h2 class="text-center initializer" @click="revealInfo">@{{ poke_info.name | capitalize }}</h2>
                     </div>
                     <div class="info-box" v-show="show_info">
+                        <h2 class="text-center"><strong>Alternate Forms</strong></h2>
+                        <img class="poke-box" :src="poke_form" alt="Shiny pokemon" @click="changeForm">
                         <h2 class="text-center"><strong>Abilities</strong></h2>
                         <ul class="list-group">
                             <li class="list-group-item text-center" v-for="abilities in poke_info.abilities">
