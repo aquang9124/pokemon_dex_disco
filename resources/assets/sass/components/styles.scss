@@ -3,23 +3,53 @@ html {
 	height: 100%;
 	body {
 		font: Lato;
-		background: url('/img/ferry.jpeg') no-repeat center center fixed;
-		background-size: cover;
+		// background: url('/img/ferry.jpeg') no-repeat center center fixed;
+		// background-size: cover;
 	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: em(10);
+	margin-bottom: em(10);
 }
 
 .panel {
 	margin-top: em(30) !important;
 }
 
+.panel-danger {
+	border-color: red;
+	.panel-heading {
+		border-color: red;
+		background-color: red;
+		color: #fff;
+	}
+}
+
 .poke-box {
 	display: block;
 	margin: 0 auto;
 	border: 3px solid lighten(gray, 10%);
+	cursor: pointer;
+}
+
+.name-box {
+	margin: em(10) auto;
+	border: 3px solid darken(red, 30%);
+	background-color: lighten(red, 10%);
 }
 
 .info-box {
 	margin: 10px auto;
-	border: 3px solid lighten(green, 20%);
-	background-color: lighten(green, 60%);
+	border: 3px solid lighten(#EB7F26, 20%);
+}
+
+.initializer {
+	cursor: pointer;
+	color: white;
+	width: 40%;
+	margin: em(10) auto;
+	&:hover {
+		color: lighten(black, 20%);
+	}
 }
